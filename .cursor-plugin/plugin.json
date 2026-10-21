@@ -1,0 +1,24 @@
+{
+  "name": "griddo-docs",
+  "version": "0.1.0",
+  "description": "Official Griddo backoffice documentation for content authors and site administrators: search, read and list pages in Spanish and English.",
+  "author": {
+    "name": "Griddo Digital",
+    "email": "support@griddo.io"
+  },
+  "homepage": "https://docs.griddo.io/mcp/",
+  "repository": "https://github.com/griddo/griddo-axdocs-cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "griddo",
+    "documentation",
+    "docs",
+    "cms",
+    "dxp",
+    "higher-education",
+    "mcp"
+  ],
+  "logo": "assets/logo.png",
+  "skills": "skills",
+  "mcpServers": "mcp.json"
+}
