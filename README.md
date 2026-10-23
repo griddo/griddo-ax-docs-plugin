@@ -4,7 +4,7 @@
 
 Gives your AI assistant the official documentation of the Griddo backoffice (Author Experience), the DXP designed for universities. Ask how to do something in Griddo and the agent answers from the documentation, linking the exact page on [docs.griddo.io](https://docs.griddo.io).
 
-Available for Cursor and for ChatGPT and Codex.
+Available for Cursor. Coming soon to ChatGPT and Codex.
 
 ## What it includes
 
@@ -17,7 +17,7 @@ Available for Cursor and for ChatGPT and Codex.
 ## Install
 
 - **Cursor:** install from the Cursor Marketplace or from [Cursor Directory](https://cursor.directory/plugins/griddo-ax-docs).
-- **ChatGPT and Codex:** install Griddo AX Docs from the plugin directory.
+- **ChatGPT and Codex:** coming soon to the plugin directory.
 - **Any MCP client:** add the server manually. In Cursor, use `.cursor/mcp.json` (project) or `~/.cursor/mcp.json` (global):
 
 ```json
