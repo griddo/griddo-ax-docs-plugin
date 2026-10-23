@@ -6,7 +6,7 @@ Gives Cursor the official documentation of the Griddo backoffice (Author Experie
 
 ## What it includes
 
-- An MCP server (`griddo-docs`, remote, no authentication, read-only) with three tools:
+- An MCP server (`griddo-ax-docs`, remote, no authentication, read-only) with three tools:
   - `search_griddo_editor_docs`: ranked excerpts in Spanish or English, each with its canonical URL.
   - `get_griddo_editor_doc`: the full Markdown of one page.
   - `list_griddo_editor_docs`: every page, grouped by section.
@@ -19,7 +19,7 @@ Install from the Cursor Marketplace, or add the server manually to `.cursor/mcp.
 ```json
 {
   "mcpServers": {
-    "griddo-docs": {
+    "griddo-ax-docs": {
       "url": "https://ax.mcp.griddo.io/mcp"
     }
   }

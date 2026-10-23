@@ -5,7 +5,7 @@ description: Answer questions about using the Griddo backoffice (pages, modules,
 
 # Griddo backoffice documentation
 
-Use the `griddo-docs` MCP server to answer questions about the Griddo backoffice (Author Experience).
+Use the `griddo-ax-docs` MCP server to answer questions about the Griddo backoffice (Author Experience).
 
 1. Call `search_griddo_editor_docs` with the user's question. Pass `lang: "en"` when the user writes in English; Spanish is the default and the most complete version.
 2. If an excerpt is not enough to answer accurately, call `get_griddo_editor_doc` with the page path returned by the search.
