@@ -32,7 +32,3 @@ tmp/
 *.zip
 *.tgz
 dist/
-
-# Local drafts from before the repo was multi-platform
-ChatGPT/
-Claude outputs/
