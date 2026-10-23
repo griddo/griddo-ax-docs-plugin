@@ -1,6 +1,6 @@
 {
   "name": "griddo-ax-docs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Official Griddo backoffice documentation for content authors and site administrators: search, read and list pages in Spanish and English.",
   "author": {
     "name": "Griddo Digital",
@@ -16,13 +16,14 @@
   "interface": {
     "displayName": "Griddo AX Docs",
     "shortDescription": "Griddo backoffice docs",
-    "longDescription": "Griddo AX Docs gives ChatGPT the official documentation of the Griddo backoffice (Author Experience), the DXP designed for universities. Ask how to do something in Griddo and the answer comes from the documentation, linking the exact page on docs.griddo.io. Search in Spanish or English, read a full page, or list every page by section. Public and read-only: it never changes a site. Developer topics (@griddo/core, schemas, module code, API, SDK) are out of scope.",
+    "longDescription": "Griddo AX Docs gives ChatGPT the official documentation of the Griddo backoffice (Author Experience), the DXP designed for universities. Ask how to do something in Griddo and the answer comes from the documentation, linking the exact page on docs.griddo.io. Search in Spanish or English, read a full page, or list every page by section. Public and read-only: it never changes a site. It does not log IP addresses or accounts; search terms are kept in technical logs for 30 days to improve the documentation. Developer topics (@griddo/core, schemas, module code, API, SDK) are out of scope.",
     "developerName": "Griddo Digital",
-    "category": "Education",
+    "category": "Productivity",
     "capabilities": ["Search documentation", "Read documentation pages", "List documentation pages"],
     "websiteURL": "https://docs.griddo.io/mcp/",
     "supportURL": "https://griddo.io/contact/",
-    "privacyPolicyURL": "https://griddo.io/privacy-policy/",
+    "privacyPolicyURL": "https://griddo.io/en/privacy-policy/",
+    "termsOfServiceURL": "https://griddo.io/en/terms/",
     "defaultPrompt": [
       "How do I add an image to a page in Griddo?",
       "How do I share a draft for review in Griddo?",
@@ -32,5 +33,65 @@
     "brandColorDark": "#FAF9F6",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/logo.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Answer a how-to question in English",
+              "prompt": "How do I add an image to a page in Griddo?",
+              "tools_triggered": "search_griddo_editor_docs",
+              "expected_behavior": "Explains how to select an image-capable module and upload or pick an image from the gallery, and cites https://docs.griddo.io/en/editor/anadir-imagen/."
+            },
+            {
+              "description": "Answer a how-to question in Spanish",
+              "prompt": "¿Cómo puedo compartir un borrador de una página para que lo revise otra persona en Griddo?",
+              "tools_triggered": "search_griddo_editor_docs",
+              "expected_behavior": "Answers in Spanish from the draft preview page (preview link / token) and cites https://docs.griddo.io/editor/compartir-borrador/."
+            },
+            {
+              "description": "Open a full documentation page",
+              "prompt": "Open the full Griddo documentation page about restricting who can edit a page and summarize it.",
+              "tools_triggered": "search_griddo_editor_docs, get_griddo_editor_doc",
+              "expected_behavior": "Finds the page, reads its full content and summarizes it, citing https://docs.griddo.io/en/editor/restringir-edicion-paginas/."
+            },
+            {
+              "description": "List what the documentation covers",
+              "prompt": "What topics does the Griddo backoffice documentation cover?",
+              "tools_triggered": "list_griddo_editor_docs",
+              "expected_behavior": "Lists the documentation sections (for example Key concepts, Getting started, Editor, Content types, Forms, Image and document gallery, Configuration, System logs) with links to their pages."
+            },
+            {
+              "description": "Handle a search with no matches",
+              "prompt": "Find the Griddo documentation about Kubernetes deployment pipelines with Terraform.",
+              "tools_triggered": "search_griddo_editor_docs",
+              "expected_behavior": "Reports that the backoffice documentation has no matching pages and does not invent an answer."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Developer topic out of scope. The plugin covers backoffice usage only; developer documentation belongs to a separate Griddo server. Expected: no answer from this plugin, or a clear statement that developer topics are out of scope.",
+              "prompt": "Show me how to write a Griddo module schema with @griddo/core."
+            },
+            {
+              "description": "Unsupported action on a site. The plugin is read-only documentation and cannot change or publish content. Expected: explains it only reads documentation and, at most, points to the documentation on publishing.",
+              "prompt": "Publish the homepage of my Griddo site and delete its old draft."
+            },
+            {
+              "description": "Unsupported payment. The plugin has no payment or financial capability. Expected: declines and does not call the plugin.",
+              "prompt": "Transfer 100 euros to another account."
+            }
+          ]
+        },
+        "demo_recording_url": "https://vimeo.com/1238856556/660cfa0e44",
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Initial release: search, read and list the pages of the official Griddo backoffice documentation, in Spanish and English."
+      }
+    }
   }
 }

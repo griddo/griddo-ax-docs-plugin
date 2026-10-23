@@ -40,10 +40,11 @@ Backoffice usage for content authors, editors and site administrators. Developer
 
 ## Privacy and support
 
-The server receives only your search terms and the paths of the pages it reads.
+The server receives only your search terms and the paths of the pages it reads. It does not log IP addresses or accounts; it keeps a technical log of each request, including the search text, for 30 days to run the service and improve the documentation.
 
 - Documentation: https://docs.griddo.io/mcp/
-- Privacy policy: https://griddo.io/privacy-policy/
+- Privacy policy: https://griddo.io/en/privacy-policy/
+- Terms of use: https://griddo.io/en/terms/
 - Support: support@griddo.io
 
 ## For maintainers
