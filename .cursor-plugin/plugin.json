@@ -1,13 +1,14 @@
 {
   "name": "griddo-ax-docs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Official Griddo backoffice documentation for content authors and site administrators: search, read and list pages in Spanish and English.",
   "author": {
     "name": "Griddo Digital",
-    "email": "support@griddo.io"
+    "email": "support@griddo.io",
+    "url": "https://griddo.io"
   },
   "homepage": "https://docs.griddo.io/mcp/",
-  "repository": "https://github.com/griddo/griddo-axdocs-cursor-plugin",
+  "repository": "https://github.com/griddo/griddo-ax-docs-plugin",
   "license": "MIT",
   "keywords": [
     "griddo",

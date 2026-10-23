@@ -33,6 +33,6 @@ tmp/
 *.tgz
 dist/
 
-# Local work outside the Cursor plugin (ChatGPT/Codex variant, drafts)
+# Local drafts from before the repo was multi-platform
 ChatGPT/
 Claude outputs/

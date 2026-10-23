@@ -1,0 +1,36 @@
+{
+  "name": "griddo-ax-docs",
+  "version": "0.1.3",
+  "description": "Official Griddo backoffice documentation for content authors and site administrators: search, read and list pages in Spanish and English.",
+  "author": {
+    "name": "Griddo Digital",
+    "email": "support@griddo.io",
+    "url": "https://griddo.io"
+  },
+  "homepage": "https://docs.griddo.io/mcp/",
+  "repository": "https://github.com/griddo/griddo-ax-docs-plugin",
+  "license": "MIT",
+  "keywords": ["griddo", "documentation", "docs", "cms", "dxp", "higher-education", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Griddo AX Docs",
+    "shortDescription": "Griddo backoffice docs",
+    "longDescription": "Griddo AX Docs gives ChatGPT the official documentation of the Griddo backoffice (Author Experience), the DXP designed for universities. Ask how to do something in Griddo and the answer comes from the documentation, linking the exact page on docs.griddo.io. Search in Spanish or English, read a full page, or list every page by section. Public and read-only: it never changes a site. Developer topics (@griddo/core, schemas, module code, API, SDK) are out of scope.",
+    "developerName": "Griddo Digital",
+    "category": "Education",
+    "capabilities": ["Search documentation", "Read documentation pages", "List documentation pages"],
+    "websiteURL": "https://docs.griddo.io/mcp/",
+    "supportURL": "https://griddo.io/contact/",
+    "privacyPolicyURL": "https://griddo.io/privacy-policy/",
+    "defaultPrompt": [
+      "How do I add an image to a page in Griddo?",
+      "How do I share a draft for review in Griddo?",
+      "Which Griddo roles can edit forms?"
+    ],
+    "brandColor": "#5057FF",
+    "brandColorDark": "#FAF9F6",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}
