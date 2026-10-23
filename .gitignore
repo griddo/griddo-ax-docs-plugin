@@ -13,6 +13,7 @@ Desktop.ini
 
 # Local tooling caches
 graft/
+.ignore
 .claude/
 .cursor/
 node_modules/
